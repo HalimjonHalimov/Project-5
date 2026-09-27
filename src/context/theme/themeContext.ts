@@ -1,9 +1,9 @@
 import { createContext, type Dispatch } from "react";
-import type { ActionType, IInitialState } from "../../types/productType";
-import { useContextGuard } from "./useContextGuard";
+import type { ActionType, ThemeType,  } from "../../types/productType";
+import { useContextGuard } from "../useContextGuard";
 
 interface ThemeContextValue {
-    state: IInitialState
+    state: ThemeType
     dispatch: Dispatch<ActionType>
 }
 

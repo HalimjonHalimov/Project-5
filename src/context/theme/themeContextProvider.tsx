@@ -1,17 +1,13 @@
 import { ThemeContext } from "./themeContext";
-import type { ActionType, IInitialState, Props } from "../../types/productType";
+import type { ActionType, Props, ThemeType } from "../../types/productType";
 import { useReducer } from "react";
 
+const initialState: ThemeType = "light";
 
-
-const initialState: IInitialState = {
-  theme: "light",
-};
-
-const reducer = (state: IInitialState, action: ActionType) => {
+const reducer = (state: ThemeType, action: ActionType): ThemeType => {
   switch (action.type) {
     case "TOGGLE_THEME":
-      return {theme: state.theme === "light" ? "dark" : "light" };
+      return state === "light" ? "dark" : "light";
 
     default:
       return state;
@@ -21,7 +17,7 @@ const reducer = (state: IInitialState, action: ActionType) => {
 export const ThemeContextProvider = ({ children }: Props) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   console.log(state);
-  
+
   return (
     <ThemeContext.Provider value={{ state, dispatch }}>
       {children}

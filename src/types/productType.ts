@@ -7,12 +7,8 @@ export interface IProductType {
     category: string
 }
 
-export interface Props {
+export type Props =  {
     children: ReactNode;
 }
-export interface IInitialState  {
-    theme: string;
-};
-export interface ActionType  {
-    type: "TOGGLE_THEME";
-};
+export type ThemeType = "light" | "dark"
+export type ActionType = | { type: "TOGGLE_THEME" }

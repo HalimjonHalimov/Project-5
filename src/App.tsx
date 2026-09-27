@@ -7,7 +7,7 @@ import { useTheme } from "./context/theme/themeContext";
 function App() {
   const { state } = useTheme();
   return (
-    <main className={`shop-app ${state.theme}`}>
+    <main className={`shop-app ${state}`}>
       <Header />
       <Hero />
       <ProductList />
