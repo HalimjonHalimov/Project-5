@@ -201,6 +201,9 @@
 }
 
 .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     overflow: hidden;
     padding: 10px;
     background: var(--surface);

@@ -16,7 +16,6 @@ const reducer = (state: ThemeType, action: ActionType): ThemeType => {
 
 export const ThemeContextProvider = ({ children }: Props) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  console.log(state);
 
   return (
     <ThemeContext.Provider value={{ state, dispatch }}>

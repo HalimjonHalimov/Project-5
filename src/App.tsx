@@ -5,9 +5,10 @@ import ProductList from "./components/feature/Product/ProductList";
 import { useTheme } from "./context/theme/themeContext";
 
 function App() {
-  const { state } = useTheme();
+  const { state: themeState } = useTheme();
+
   return (
-    <main className={`shop-app ${state}`}>
+    <main className={`shop-app ${themeState}`}>
       <Header />
       <Hero />
       <ProductList />
